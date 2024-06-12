@@ -1,0 +1,37 @@
+<% layout('layout') %>
+<% title = 'Lista de Pedidos' %>
+
+<h1>Lista de Pedidos</h1>
+<table>
+    <thead>
+        <tr>
+            <th>ID del Pedido</th>
+            <th>Usuario</th>
+            <th>Fecha</th>
+            <th>Cantidad</th>
+            <th>Precio</th>
+            <th>Pagado</th>
+            <th>Acciones</th>
+        </tr>
+    </thead>
+    <tbody>
+        <% orders.forEach(order => { %>
+            <tr>
+                <td><%= order._id %></td>
+                <td><%= order.user.username %></td>
+                <td><%= order.date.toDateString() %></td>
+                <td><%= order.quantity %></td>
+                <td><%= order.price %></td>
+                <td><%= order.paid ? 'Sí' : 'No' %></td>
+                <td>
+                    <% if (!order.paid) { %>
+                        <form action="/payment" method="post">
+                            <input type="hidden" name="orderId" value="<%= order._id %>">
+                            <button type="submit">Pagar</button>
+                        </form>
+                    <% } %>
+                </td>
+            </tr>
+        <% }); %>
+    </tbody>
+</table>

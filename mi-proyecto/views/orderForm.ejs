@@ -1,0 +1,24 @@
+<% layout('layout') %>
+<% title = 'Nuevo Pedido' %>
+<script src="/js/calculatePrice.js" defer></script>
+
+<h1>Nuevo Pedido</h1>
+<form action="/orders" method="post">
+    <div>
+        <label for="userId">ID del Usuario:</label>
+        <input type="text" id="userId" name="userId" required>
+    </div>
+    <div>
+        <label for="date">Fecha:</label>
+        <input type="date" id="date" name="date" required>
+    </div>
+    <div>
+        <label for="quantity">Cantidad:</label>
+        <input type="number" id="quantity" name="quantity" required>
+    </div>
+    <div>
+        <label for="price">Precio:</label>
+        <input type="number" id="price" name="price" required readonly>
+    </div>
+    <button type="submit">Crear Pedido</button>
+</form>

@@ -1,0 +1,130 @@
+/* /public/css/styles.css */
+
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f4f4f4;
+}
+
+h1, h2 {
+    color: #333;
+}
+
+.container {
+    width: 80%;
+    margin: auto;
+    overflow: hidden;
+}
+
+header {
+    background: #333;
+    color: #fff;
+    padding-top: 30px;
+    min-height: 70px;
+    border-bottom: #77d9ff 3px solid;
+}
+
+header a {
+    color: #fff;
+    text-decoration: none;
+    text-transform: uppercase;
+    font-size: 16px;
+}
+
+header ul {
+    padding: 0;
+    list-style: none;
+}
+
+header li {
+    float: left;
+    display: inline;
+    padding: 0 20px 0 20px;
+}
+
+header #branding {
+    float: left;
+}
+
+header #branding h1 {
+    margin: 0;
+}
+
+header nav {
+    float: right;
+    margin-top: 10px;
+}
+
+button, input[type="submit"] {
+    display: inline-block;
+    height: 30px;
+    background: #333;
+    color: #fff;
+    border: 0;
+    padding-left: 20px;
+    padding-right: 20px;
+    cursor: pointer;
+    text-transform: uppercase;
+}
+
+form div {
+    margin-bottom: 15px;
+}
+
+label {
+    display: inline-block;
+    width: 140px;
+}
+
+input[type="text"], input[type="password"], input[type="email"], input[type="date"], input[type="number"] {
+    width: 300px;
+    padding: 10px;
+}
+/* /public/css/styles.css */
+
+/* Animación de botón al pasar el ratón */
+button, input[type="submit"] {
+    /* Estilos anteriores */
+    transition: background-color 0.3s ease;
+}
+
+button:hover, input[type="submit"]:hover {
+    background-color: #555;
+}
+
+/* Transición de cambios en el color de fondo del encabezado */
+header {
+    /* Estilos anteriores */
+    transition: background-color 0.5s ease;
+}
+
+header:hover {
+    background-color: #444;
+}
+/* /public/css/styles.css */
+
+/* Desplazamiento suave para enlaces internos */
+a[href^="#"] {
+    transition: all 0.5s ease;
+}
+
+a[href^="#"]:hover {
+    color: #777;
+}
+
+/* Desplazamiento suave */
+html {
+    scroll-behavior: smooth;
+}
+/* /public/css/styles.css */
+
+/* Efecto de sombra al pasar el ratón sobre los elementos del formulario */
+form div {
+    /* Estilos anteriores */
+    transition: box-shadow 0.3s ease;
+}
+
+form div:hover {
+    box-shadow: 0 0 5px rgba(0, 0, 0, 0.2);
+}
